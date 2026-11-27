@@ -66,8 +66,3 @@ server.js        backend (http + sqlite + seed desde PokeAPI)
 public/          frontend (index.html, script.js, styles.css)
 pokedex.db       base de datos (se crea sola)
 ```
-
-## Configuracion opcional
-
-- `PORT`: puerto del servidor (por defecto 3000)
-- `POKEAPI_URL`: URL de PokeAPI para el seed (por defecto `offset=0&limit=100`; usa `offset=20` si quieres la misma lista de la tarea original)
