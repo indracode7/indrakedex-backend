@@ -1,0 +1,121 @@
+body {
+  background-color: rgb(250, 185, 227);
+  color: black;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* search bar + boton agregar */
+#barra-superior {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+#barra-busqueda {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid black;
+}
+
+#boton-agregar {
+  padding: 8px 14px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Mensajes de carga-error-no resuktados*/
+#mensaje {
+  text-align: center;
+}
+
+/* grid tarjeta */
+#lista-pokemon {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
+}
+
+/* tarjeta design*/
+.tarjeta {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* mismo img size*/
+.tarjeta img,
+#contenido-detalles img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+}
+
+.tarjeta p {
+  margin: 5px 0;
+}
+
+/* detallitos */
+dialog {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 20px;
+  max-width: 350px;
+  text-align: center;
+}
+
+#contenido-detalles p {
+  margin: 6px 0;
+}
+
+/* botones de las ventanitas */
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.botones button {
+  padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#boton-eliminar {
+  background-color: #ffb3b3;
+}
+
+/* formulario */
+#formulario label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+}
+
+#formulario input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px;
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+#error-formulario {
+  color: red;
+  min-height: 1em;
+}

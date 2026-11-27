@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Pokedex</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Indrakedex</h1>
+
+  <!-- searchbar + boton agregar -->
+  <div id="barra-superior">
+    <input
+      type="text"
+      id="barra-busqueda"
+      placeholder="Busca un pokemon por nombre"
+    >
+    <button id="boton-agregar">+ Agregar pokemon</button>
+  </div>
+
+  <!-- mensajes -->
+  <p id="mensaje"></p>
+
+  <!-- tarjetonas -->
+  <div id="lista-pokemon"></div>
+
+  <!-- ventanita de info del pokemon -->
+  <dialog id="ventana-detalles">
+    <div id="contenido-detalles"></div>
+    <div class="botones">
+      <button id="boton-editar">Editar</button>
+      <button id="boton-eliminar">Eliminar</button>
+      <button id="boton-cerrar">Cerrar</button>
+    </div>
+  </dialog>
+
+  <!-- ventanita del formulario (sirve para crear y para editar) -->
+  <dialog id="ventana-formulario">
+    <form id="formulario" method="dialog">
+      <h2 id="titulo-formulario">Agregar pokemon</h2>
+
+      <label>Nombre
+        <input type="text" id="campo-nombre" required>
+      </label>
+      <label>Altura (m)
+        <input type="number" id="campo-altura" min="0" step="0.1" value="0">
+      </label>
+      <label>Peso (kg)
+        <input type="number" id="campo-peso" min="0" step="0.1" value="0">
+      </label>
+      <label>Tipos (separados por coma)
+        <input type="text" id="campo-tipos" placeholder="fire, flying">
+      </label>
+      <label>Habilidades (separadas por coma)
+        <input type="text" id="campo-habilidades" placeholder="blaze, solar-power">
+      </label>
+      <label>URL de la imagen (opcional)
+        <input type="url" id="campo-imagen" placeholder="https://...">
+      </label>
+
+      <p id="error-formulario"></p>
+
+      <div class="botones">
+        <button type="submit" id="boton-guardar">Guardar</button>
+        <button type="button" id="boton-cancelar">Cancelar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
